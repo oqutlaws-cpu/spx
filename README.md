@@ -1,6 +1,6 @@
 # SPECTRAL XDGE 0.1 · Generation 06
 
-Situs rekrutmen bergaya arsip lab: pendaftaran + kuis golongan darah, kartu JPG ber-QR, verifikasi kartu,
+Website SPX: pendaftaran + kuis golongan darah, kartu JPG ber-QR, verifikasi kartu,
 Team Lineup, Arsip (map dan buku lembaran), dan halaman Prosedur yang dikunci sandi.
 Situs statis murni (HTML, CSS, JavaScript biasa), tanpa build, tanpa server khusus.
 
