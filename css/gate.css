@@ -1,0 +1,140 @@
+/* css/gate.css: Verifikasi kartu */
+
+#s-gate {
+  padding: 26px 20px 22px;
+  box-shadow: 0 0 0 3px #6e0b12, 0 0 44px rgba(179, 18, 28, .3);
+}
+
+#s-gate h2 {
+  text-align: center;
+  font-size: 26px;
+  margin: 0 0 10px;
+  text-shadow: 2px 2px 0 #6e0b12;
+}
+
+#s-gate>p {
+  text-align: center;
+  font-size: 14px;
+}
+
+#s-gate .photo-drop {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  min-height: 210px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .2s;
+  background: linear-gradient(#b3121c, #b3121c) top left/24px 3px no-repeat, linear-gradient(#b3121c, #b3121c) top left/3px 24px no-repeat, linear-gradient(#b3121c, #b3121c) top right/24px 3px no-repeat, linear-gradient(#b3121c, #b3121c) top right/3px 24px no-repeat, linear-gradient(#b3121c, #b3121c) bottom left/24px 3px no-repeat, linear-gradient(#b3121c, #b3121c) bottom left/3px 24px no-repeat, linear-gradient(#b3121c, #b3121c) bottom right/24px 3px no-repeat, linear-gradient(#b3121c, #b3121c) bottom right/3px 24px no-repeat;
+  background-color: rgba(179, 18, 28, .06);
+}
+
+#s-gate .photo-drop:hover {
+  box-shadow: inset 0 0 36px rgba(179, 18, 28, .3);
+}
+
+#s-gate .photo-drop::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: #b3121c;
+  box-shadow: 0 0 14px 2px #b3121c;
+  animation: sweep 2.8s linear infinite;
+  pointer-events: none;
+}
+
+.gicon {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 0 8px rgba(179, 18, 28, .5));
+}
+
+.gl {
+  font: 15px "Special Elite", monospace;
+  letter-spacing: .12em;
+}
+
+.gs {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+#g-msg {
+  text-align: center;
+  margin-top: 12px;
+}
+
+#g-ok {
+  border-color: #2f8f55;
+  background: rgba(47, 143, 85, .08);
+  animation: fup .5s ease-out both;
+}
+
+#g-ok .stamp {
+  color: #5fd08a;
+  border-color: #5fd08a;
+  animation: slam .5s cubic-bezier(.2, 1.6, .4, 1) both;
+}
+
+#g-ok b {
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  #s-gate .photo-drop::after,
+  #g-ok,
+  #g-ok .stamp {
+    animation: none;
+  }
+}
+
+.brief {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed #6e0b12;
+  animation: fup .5s ease-out .5s backwards;
+}
+
+.brief-h {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.brief-h span {
+  border: 2px solid #b3121c;
+  color: #b3121c;
+  padding: 1px 8px;
+  transform: rotate(-2deg);
+  font: 12px "Courier Prime", monospace;
+  letter-spacing: .18em;
+}
+
+.brief-h b {
+  font: 400 20px "Special Elite", monospace;
+  color: #eee6e0;
+}
+
+#gb-text p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #cfc4bd;
+}
+
+.brief .btn {
+  margin-top: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brief {
+    animation: none;
+  }
+}

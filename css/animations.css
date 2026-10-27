@@ -1,0 +1,259 @@
+/* css/animations.css: semua @keyframes (satu tempat untuk mengubah gerak) */
+
+@keyframes pulse {
+    to {
+        transform: scale(2.2);
+        opacity: .35;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scan {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes shake {
+
+    20%,
+    60% {
+        transform: translateX(-8px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+@keyframes sweep {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    to {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes bob {
+    50% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+}
+
+@keyframes typing {
+    to {
+        width: calc(var(--n) * 1ch);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes deny {
+
+    0%,
+    100% {
+        background: transparent;
+    }
+
+    20% {
+        background: rgba(179, 18, 28, .2);
+    }
+}
+
+@keyframes slam {
+    from {
+        transform: scale(2.6) rotate(-14deg);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1) rotate(-4deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes cvopen {
+    to {
+        transform: rotateY(-168deg);
+        visibility: hidden;
+    }
+}
+
+@keyframes fup {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes pinin {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) rotate(22deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(6deg);
+    }
+}
+
+@keyframes stampin {
+    from {
+        opacity: 0;
+        transform: scale(2.4) rotate(-22deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(-9deg);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dpfade {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes dpout {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes dpin {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+}
+
+@keyframes dpinout {
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes stampsoft {
+    from {
+        opacity: 0;
+        transform: scale(1.12) rotate(-9deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(-9deg);
+    }
+}
+
+@keyframes pgin {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+
+@keyframes fbopen {
+    to {
+        transform: rotateY(-168deg);
+        visibility: hidden;
+    }
+}
+
+@keyframes stickin {
+    from {
+        opacity: 0;
+        transform: translateY(-14px) rotate(9deg);
+    }
+}
+
+@keyframes pgflip {
+    from {
+        opacity: .2;
+        transform: perspective(1400px) rotateY(-80deg);
+    }
+}
+
+@keyframes kpup {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+@keyframes kpdown {
+    to {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+}

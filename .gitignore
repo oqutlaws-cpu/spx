@@ -1,0 +1,8 @@
+__pycache__/
+.DS_Store
+
+# isi Prosedur dalam teks biasa. Hapus baris ini hanya jika repo PRIVATE
+tools/procedure.html
+
+# isi arsip + kode angka dalam teks biasa. Hapus baris ini hanya jika repo PRIVATE
+tools/archive.json
