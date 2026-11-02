@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""Membuat js/data/archive.js dari tools/archive.json.
-
-Cara pakai (dari folder utama proyek):
-    pip install cryptography
-    python tools/build_archive.py
-
-Aturan:
-  - SEMUA berkas terkunci. "sandi" = KODE ANGKA (jawaban clue) untuk membuka berkas itu.
-    Isinya dienkripsi (AES-GCM) dengan kode tersebut, jadi tidak terbaca di source.
-    Yang publik hanya kode berkas, judul, dan jumlah digit kode.
-  - Alurnya: Clue A (briefing setelah verifikasi) membuka Berkas 01; narasi di Berkas 01
-    berakhir dengan Clue B yang membuka Berkas 02; dan seterusnya. Urutannya ketat.
-  - "briefing" (opsional) = deskripsi Clue A, ditulis biasa dan tampil setelah verifikasi kartu.
-  - Gunakan kode minimal 8 digit. Kode pendek bisa ditebak lewat komputer.
-"""
 import base64, json, os, sys
 from pathlib import Path
 from cryptography.hazmat.primitives import hashes
