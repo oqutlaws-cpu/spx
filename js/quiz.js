@@ -185,7 +185,7 @@ function buildResult() {
   };
   lastName = name;
   sheetCall("claim", {
-    character: data.prof,
+    character: data.muse,
     nickname: name,
     usn: handle,
   })
