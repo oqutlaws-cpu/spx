@@ -70,11 +70,28 @@ $("go-q").onclick = function () {
     return;
   }
   $("form-err").textContent = "";
-  answers = [];
-  pflags = [];
-  qi = 0;
-  renderQ();
-  show("s-q");
+  var btn = $("go-q");
+  btn.disabled = true;
+  sheetCall("check", {
+    nickname: $("f-name").value.trim(),
+    usn: $("f-handle").value.trim(),
+  })
+    .then(function (r) {
+      btn.disabled = false;
+      if (r.status !== "ok") {
+        $("form-err").textContent = sheetMsg(r);
+        return;
+      }
+      answers = [];
+      pflags = [];
+      qi = 0;
+      renderQ();
+      show("s-q");
+    })
+    .catch(function () {
+      btn.disabled = false;
+      $("form-err").textContent = sheetMsg({});
+    });
 };
 function renderQ() {
   var q = QUESTIONS[qi];
@@ -167,8 +184,21 @@ function buildResult() {
     photo: photoImg,
   };
   lastName = name;
-  Promise.all([assetsReady(), fontsReady()])
-    .then(function () {
+  sheetCall("claim", {
+    character: data.prof,
+    nickname: name,
+    usn: handle,
+  })
+    .then(function (r) {
+      if (r.status !== "ok") {
+        $("form-err").textContent = sheetMsg(r);
+        show("s-form");
+        return null;
+      }
+      return Promise.all([assetsReady(), fontsReady()]);
+    })
+    .then(function (ready) {
+      if (!ready) return;
       lastCanvas = drawCard(data);
       $("r-img").src = lastCanvas.toDataURL("image/jpeg", 0.9);
       $("dl-msg").textContent = "";

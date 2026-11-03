@@ -143,9 +143,7 @@ function buildPages(a) {
     pf.querySelector(".pg-code").textContent = nx.code;
     pf.querySelector(".seal-t").textContent =
       nx.code +
-      " disegel. Pecahkan Clue " +
-      clueLetter(ni) +
-      " di halaman sebelumnya, lalu masukkan kodenya.";
+      " disegel. Pecahkan! lalu masukkan kodenya.";
     pf.querySelector(".seal-go").onclick = function () {
       openKeypad(ni);
     };
@@ -164,21 +162,19 @@ function buildPages(a) {
       p.textContent = t;
       cur.flow.appendChild(p);
       if (!over(cur)) return;
-      if (cur.flow.children.length > 1) {
-        cur.flow.removeChild(p);
-        cur = mk(false);
-        pages.push(cur);
-        cur.flow.appendChild(p);
-        if (!over(cur)) return;
-      }
       var words = t.split(/\s+/),
         i = 0;
       p.textContent = "";
       while (i < words.length) {
         var prev = p.textContent;
         p.textContent = prev ? prev + " " + words[i] : words[i];
-        if (over(cur) && prev) {
-          p.textContent = prev;
+        if (over(cur)) {
+          if (prev) p.textContent = prev;
+          else if (cur.flow.children.length > 1) cur.flow.removeChild(p);
+          else {
+            i++;
+            continue;
+          }
           cur = mk(false);
           pages.push(cur);
           p = document.createElement("p");
@@ -362,9 +358,7 @@ function renderArsip() {
     fd.querySelector("p").textContent = open
       ? a.sum
       : canEnter
-        ? "Arsip " +
-          clueLetter(i) +
-          ", Pecahkan lalu buka."
+        ? "Temukan petunjuk. Buka kebenarannya."
         : "Terkunci. Selesaikan berkas sebelumnya lebih dulu.";
     var ob = fd.querySelector(".fd-open");
     ob.textContent = open

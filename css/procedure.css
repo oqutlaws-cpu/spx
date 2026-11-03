@@ -357,13 +357,18 @@ a.btn {
 
 .pin {
   position: absolute;
-  right: 7%;
-  top: 15%;
-  width: 21%;
-  background: #e8e3d3;
-  padding: 5% 5% 3%;
-  box-shadow: 1px 3px 8px rgba(0, 0, 0, .35);
+  right: 2%;
+  top: 6%;
+  width: 40%;
   transform: rotate(6deg);
+}
+
+@media (max-width: 600px) {
+  .pin {
+    right: -4%;
+    top: 17%;
+    width: 34%;
+  }
 }
 
 .pin svg {

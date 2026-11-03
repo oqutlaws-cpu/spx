@@ -1,12 +1,16 @@
 /* Keypad kode angka: panel brankas untuk membuka berkas arsip (jawaban clue = kode angka) */
 
-var kp = { i: -1, buf: "", len: 8, busy: false };
+/* panjang kode sengaja tidak ditampilkan: kp.max hanya batas atas input, dicek lewat tombol BUKA / Enter */
+var kp = { i: -1, buf: "", max: 20, busy: false };
 
 function kpRender() {
-  var s = $("kp-slots").children;
-  for (var k = 0; k < s.length; k++) {
-    s[k].textContent = kp.buf.charAt(k);
-    s[k].className = k < kp.buf.length ? "on" : "";
+  var sl = $("kp-slots");
+  sl.innerHTML = "";
+  for (var k = 0; k < kp.buf.length; k++) {
+    var c = document.createElement("i");
+    c.textContent = kp.buf.charAt(k);
+    c.className = "on";
+    sl.appendChild(c);
   }
 }
 function openKeypad(i) {
@@ -15,18 +19,14 @@ function openKeypad(i) {
   kp.i = i;
   kp.buf = "";
   kp.busy = false;
-  kp.len = a.len || 8;
   $("kp-code").textContent = a.code;
   $("kp-t").textContent =
-    "Masukkan jawaban Clue " +
-    clueLetter(i) +
-    " (angka) untuk membuka " +
-    a.code +
-    ".";
+    i === 0
+      ? "Tanggal lahir nya shio naga, lihat sekitarmu"
+      : "File Terkunci";
   var sl = $("kp-slots");
   sl.innerHTML = "";
   sl.className = "kp-slots";
-  for (var k = 0; k < kp.len; k++) sl.appendChild(document.createElement("i"));
   $("kp-err").textContent = "";
   $("kp-err").className = "kp-err";
   var d = $("kp");
@@ -47,10 +47,9 @@ function closeKeypad() {
   );
 }
 function kpPush(n) {
-  if (kp.busy || kp.buf.length >= kp.len) return;
+  if (kp.busy || kp.buf.length >= kp.max) return;
   kp.buf += n;
   kpRender();
-  if (kp.buf.length === kp.len) kpSubmit();
 }
 function kpBack() {
   if (kp.busy) return;
@@ -63,6 +62,7 @@ function kpClear() {
   kpRender();
 }
 function kpSubmit() {
+  if (kp.busy || !kp.buf.length) return;
   var i = kp.i,
     a = ARSIP[i],
     sl = $("kp-slots"),
@@ -120,6 +120,13 @@ function kpSubmit() {
     };
     pad.appendChild(b);
   });
+  var ok = document.createElement("button");
+  ok.type = "button";
+  ok.className = "fn ok";
+  ok.textContent = "BUKA";
+  ok.setAttribute("aria-label", "Buka berkas");
+  ok.onclick = kpSubmit;
+  pad.appendChild(ok);
   $("kp-x").onclick = closeKeypad;
   $("kp").onclick = function (e) {
     if (e.target === $("kp")) closeKeypad();
@@ -128,6 +135,7 @@ function kpSubmit() {
     if ($("kp").hidden) return;
     if (/^[0-9]$/.test(e.key)) kpPush(e.key);
     else if (e.key === "Backspace") kpBack();
+    else if (e.key === "Enter") kpSubmit();
     else if (e.key === "Escape") closeKeypad();
   });
 })();

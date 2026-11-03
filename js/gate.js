@@ -9,20 +9,16 @@ function openGate() {
 }
 $("go-gate2").onclick = openGate;
 
-/* ===== briefing Clue A: tampil setelah verifikasi berhasil ===== */
+/* ===== setelah verifikasi berhasil =====
+   Berkas briefing (Clue A) sudah DIHAPUS dari alur: peserta langsung diarahkan ke beranda. */
 function renderBrief() {
   var box = $("g-brief");
-  if (typeof BRIEFING === "undefined") {
-    box.style.display = "none";
-    return;
-  }
   box.style.display = "";
   box.innerHTML =
-    '<div class="brief-h"><span>BRIEFING</span><b>Berkas misi diterima</b></div>' +
-    '<p style="margin:0 0 12px;font-size:14px;color:#cfc4bd">Satu berkas briefing sudah disiapkan untukmu. Buka berkasnya, baca baik-baik, lalu pecahkan clue di dalamnya.</p>' +
-    '<button class="btn" type="button" id="go-brief">Lanjutkan</button>';
+    '<div class="brief-h"><span>VERIFIKASI</span><b>Verifikasi selesai</b></div>' +
+    '<button class="btn" type="button" id="go-brief">Kembali ke Beranda</button>';
   $("go-brief").onclick = function () {
-    openFile(-1, true);
+    show("s-home");
   };
 }
 
