@@ -184,6 +184,7 @@ function buildResult() {
     photo: photoImg,
   };
   lastName = name;
+  console.log("DATA MUSE:", data.muse);
   sheetCall("claim", {
     character: data.muse,
     nickname: name,
