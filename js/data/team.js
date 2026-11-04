@@ -96,6 +96,6 @@ var TEAM = [
     role: "XSUPERVISOR",
     blood: "B",
     img: "assets/team/Mikala.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "Profesor yang diberkati Tuhan memiliki paras cantik dengan segudang pemikiran liar yang terkadang melampaui batas pemikiran manusia biasa. Menghabiskan hidupnya untuk selalu mencoba hal-hal baru, walau terkadang tidak pernah ia betul-betul selesaikan. Saat menatap matanya pertama kali mungkin kamu bisa melihat binar terang bercahaya, namun dibalik itu dunianya bukan hanya sebatas hitam dan putih, ia adalah abu-abu. Bukan pilihannya juga untuk berada ditengah-tengah ketidakpastian tersebut. Itu adalah takdir, yang harus diterimanya dengan hati yang besar.",
   },
 ];
