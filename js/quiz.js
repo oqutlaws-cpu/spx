@@ -186,6 +186,7 @@ function buildResult() {
   lastName = name;
   console.log("DATA MUSE:", data.muse);
   sheetCall("claim", {
+    file: fileNo,
     character: data.muse,
     nickname: name,
     usn: handle,

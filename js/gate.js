@@ -62,6 +62,8 @@ function decodeFile(file, cb) {
 $("g-file").onchange = function (e) {
   var f = e.target.files && e.target.files[0];
   if (!f) return;
+  e.target.value =
+    ""; /* supaya file yang sama bisa dipilih lagi untuk "Coba lagi" */
   $("g-ok").style.display = "none";
   $("g-msg").textContent = "> VERIFIKASI IDENTITAS...";
   if (typeof jsQR !== "function") {
@@ -81,12 +83,23 @@ $("g-file").onchange = function (e) {
         "> AKSES DITOLAK. Kartu tidak valid. Isi kartu tidak cocok dengan tanda pengamannya.";
       return;
     }
-    $("g-msg").textContent = "";
-    $("g-name").textContent = data.name;
-    $("g-prof").textContent = RESULT[data.type].prof;
-    $("g-blood").textContent = data.blood;
-    $("g-lvl").textContent = data.lvl;
-    renderBrief();
-    $("g-ok").style.display = "block";
+    $("g-msg").textContent = "> Memeriksa ke server...";
+    sheetCall("verify", { file: data.file, nickname: data.name })
+      .then(function (r) {
+        if (r.status !== "ok") {
+          $("g-msg").textContent = "> AKSES DITOLAK. " + sheetMsg(r);
+          return;
+        }
+        $("g-msg").textContent = "";
+        $("g-name").textContent = data.name;
+        $("g-prof").textContent = RESULT[data.type].prof;
+        $("g-blood").textContent = data.blood;
+        $("g-lvl").textContent = data.lvl;
+        renderBrief();
+        $("g-ok").style.display = "block";
+      })
+      .catch(function () {
+        $("g-msg").textContent = "> Gagal menghubungi server. Coba lagi.";
+      });
   });
 };
