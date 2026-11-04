@@ -14,9 +14,12 @@
   background: linear-gradient(165deg, #241517, #0b0b0d);
   border: 1px solid #3a2a2c;
   color: #eee6e0;
-  animation: fup .5s ease-out backwards;
-  animation-delay: calc(var(--i, 0) * .1s);
-  transition: transform .2s, box-shadow .2s, border-color .2s;
+  animation: fup 0.5s ease-out backwards;
+  animation-delay: calc(var(--i, 0) * 0.1s);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
 }
 
 .tc::before {
@@ -34,7 +37,7 @@
 .tc:focus-visible {
   transform: translateY(-6px) rotate(-1deg);
   border-color: #b3121c;
-  box-shadow: 0 14px 28px rgba(179, 18, 28, .38);
+  box-shadow: 0 14px 28px rgba(179, 18, 28, 0.38);
 }
 
 .tc .ph2 {
@@ -44,7 +47,13 @@
   place-items: end center;
   aspect-ratio: 3 / 4;
   margin: 4px 0 0;
-  background: radial-gradient(ellipse at 50% 35%, #3a1a1d, #120c0d 70%), repeating-linear-gradient(0deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 4px);
+  background:
+    radial-gradient(ellipse at 50% 35%, #3a1a1d, #120c0d 70%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03) 0 1px,
+      transparent 1px 4px
+    );
   font: inherit;
 }
 
@@ -60,8 +69,10 @@
   position: absolute;
   left: 8px;
   bottom: 2px;
-  font: 58px/1 "Pirata One", serif;
-  color: rgba(179, 18, 28, .35);
+  font:
+    58px/1 "Pirata One",
+    serif;
+  color: rgba(179, 18, 28, 0.35);
 }
 
 .tc .ph2::after {
@@ -86,8 +97,10 @@
   top: 12px;
   left: 9px;
   z-index: 2;
-  font: 10px "Courier Prime", monospace;
-  letter-spacing: .16em;
+  font:
+    10px "Courier Prime",
+    monospace;
+  letter-spacing: 0.16em;
   color: #b3a79f;
 }
 
@@ -103,9 +116,11 @@
   border-radius: 50%;
   background: #b3121c;
   color: #fff;
-  font: 700 13px "Courier Prime", monospace;
+  font:
+    700 13px "Courier Prime",
+    monospace;
   font-style: normal;
-  box-shadow: 0 0 10px rgba(179, 18, 28, .6);
+  box-shadow: 0 0 10px rgba(179, 18, 28, 0.6);
 }
 
 .tc .nm {
@@ -115,18 +130,23 @@
   margin: 0;
   padding: 10px 10px 0;
   text-align: left;
-  font: 16px "Special Elite", monospace;
+  font:
+    16px "Special Elite",
+    monospace;
 }
 
 .tc .rl {
   display: block;
   padding: 2px 10px 12px;
-  font: 12px "Courier Prime", monospace;
+  font:
+    12px "Courier Prime",
+    monospace;
   color: #b3a79f;
 }
 
 .dp-in {
-  background: #f3efe8 repeating-linear-gradient(transparent 0 27px, rgba(0, 0, 0, .05) 27px 28px);
+  background: #f3efe8
+    repeating-linear-gradient(transparent 0 27px, rgba(0, 0, 0, 0.05) 27px 28px);
 }
 
 .dp-in::after {
@@ -134,8 +154,10 @@
   position: absolute;
   right: -6px;
   bottom: 64px;
-  font: 46px "Pirata One", serif;
-  color: rgba(179, 18, 28, .13);
+  font:
+    46px "Pirata One",
+    serif;
+  color: rgba(179, 18, 28, 0.13);
   transform: rotate(-12deg);
   pointer-events: none;
 }
@@ -182,7 +204,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  filter: grayscale(.5) contrast(1.1) brightness(.95);
+  filter: grayscale(0.5) contrast(1.1) brightness(0.95);
 }
 
 .tc .ph2.has::before {
@@ -190,7 +212,12 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(10, 10, 10, .25), transparent 35%, rgba(10, 10, 10, .85));
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.25),
+    transparent 35%,
+    rgba(10, 10, 10, 0.85)
+  );
 }
 
 .tc .ph2.has svg {
@@ -214,9 +241,9 @@
   object-position: center top;
   margin: 0 0 8px 12px;
   border: 4px solid #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .35);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   transform: rotate(3deg);
-  filter: grayscale(.4);
+  filter: grayscale(0.4);
 }
 
 #dp-img[hidden] {
@@ -244,7 +271,7 @@
   padding: 0;
   margin: 0;
   transform: none;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 .dp-x {
@@ -271,7 +298,7 @@
   background: radial-gradient(ellipse at 50% 35%, #3a1a1d, #120c0d 75%);
   border: 3px solid #141010;
   overflow: hidden;
-  box-shadow: 3px 4px 0 rgba(140, 17, 23, .55);
+  box-shadow: 3px 4px 0 rgba(140, 17, 23, 0.55);
 }
 
 #dp-img {
@@ -286,7 +313,7 @@
   box-shadow: none;
   object-fit: cover;
   object-position: center top;
-  filter: grayscale(.45) contrast(1.1);
+  filter: grayscale(0.45) contrast(1.1);
 }
 
 #dp-img[hidden] {
@@ -302,7 +329,7 @@
   stroke: #6e0b12;
 }
 
-#dp-img:not([hidden])+.dp-sil {
+#dp-img:not([hidden]) + .dp-sil {
   display: none;
 }
 
@@ -316,8 +343,10 @@
 }
 
 .dp-lbl {
-  font: 10px "Courier Prime", monospace;
-  letter-spacing: .2em;
+  font:
+    10px "Courier Prime",
+    monospace;
+  letter-spacing: 0.2em;
   color: #6b625b;
   margin-top: 10px;
 }
@@ -358,8 +387,16 @@
 .dp-bc {
   height: 28px;
   margin: 14px 0 12px;
-  background: repeating-linear-gradient(90deg, #141010 0 2px, transparent 2px 4px, #141010 4px 5px, transparent 5px 9px, #141010 9px 12px, transparent 12px 14px);
-  opacity: .85;
+  background: repeating-linear-gradient(
+    90deg,
+    #141010 0 2px,
+    transparent 2px 4px,
+    #141010 4px 5px,
+    transparent 5px 9px,
+    #141010 9px 12px,
+    transparent 12px 14px
+  );
+  opacity: 0.85;
 }
 
 .dp-in .btn {
@@ -372,11 +409,13 @@
   top: 128px;
   border: 3px solid #b3121c;
   color: #b3121c;
-  font: 15px "Special Elite", monospace;
-  letter-spacing: .1em;
+  font:
+    15px "Special Elite",
+    monospace;
+  letter-spacing: 0.1em;
   padding: 2px 10px;
-  background: rgba(243, 239, 232, .55);
-  animation: stampin .5s cubic-bezier(.2, 1.6, .4, 1) .45s both;
+  background: rgba(243, 239, 232, 0.55);
+  animation: stampin 0.5s cubic-bezier(0.2, 1.6, 0.4, 1) 0.45s both;
 }
 
 .dp.arsip .dp-stamp {
@@ -386,19 +425,18 @@
 .dp:not([hidden]) .dp-main,
 .dp:not([hidden]) #dp-bio,
 .dp:not([hidden]) .dp-bc {
-  animation: fup .45s ease-out backwards;
+  animation: fup 0.45s ease-out backwards;
 }
 
 .dp:not([hidden]) #dp-bio {
-  animation-delay: .15s;
+  animation-delay: 0.15s;
 }
 
 .dp:not([hidden]) .dp-bc {
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .dp-stamp,
   .dp:not([hidden]) .dp-main,
   .dp:not([hidden]) #dp-bio,
@@ -408,40 +446,366 @@
 }
 
 .dp {
-  animation: dpfade .25s ease-out;
+  animation: dpfade 0.25s ease-out;
 }
 
 .dp.out {
-  animation: dpout .22s ease-in forwards;
+  animation: dpout 0.22s ease-in forwards;
 }
 
 .dp-in {
-  animation: dpin .38s cubic-bezier(.22, .8, .3, 1);
+  animation: dpin 0.38s cubic-bezier(0.22, 0.8, 0.3, 1);
 }
 
 .dp.out .dp-in {
-  animation: dpinout .22s ease-in forwards;
+  animation: dpinout 0.22s ease-in forwards;
 }
 
 .dp-in .scan {
   height: 2px;
-  opacity: .6;
+  opacity: 0.6;
   box-shadow: 0 0 8px #b3121c;
   animation-duration: 1.6s;
 }
 
 .dp-stamp {
   transform: rotate(-9deg);
-  animation: stampsoft .6s ease-out .5s both;
+  animation: stampsoft 0.6s ease-out 0.5s both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .dp,
   .dp.out,
   .dp-in,
   .dp.out .dp-in,
   .dp-stamp {
     animation: none;
+  }
+}
+/* ===== kartu anggota yang bisa dibalik ===== */
+.tf {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  padding: 16px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.86);
+  animation: dpfade 0.3s ease-out;
+}
+.tf[hidden] {
+  display: none;
+}
+.tf.out {
+  animation: dpout 0.22s ease-in forwards;
+}
+.tf-stage {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  perspective: 1800px;
+}
+.tf-card {
+  position: relative;
+  width: min(88vw, 400px, calc((100vh - 130px) * 0.652));
+  aspect-ratio: 3 / 4.6;
+  transform-style: preserve-3d;
+  transition: transform 0.85s cubic-bezier(0.45, 0.05, 0.25, 1);
+  cursor: pointer;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  animation: dpin 0.4s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+@supports (height: 100dvh) {
+  .tf-card {
+    width: min(88vw, 400px, calc((100dvh - 130px) * 0.652));
+  }
+}
+.tf.out .tf-card {
+  animation: dpout 0.22s ease-in forwards;
+}
+.tf-card.flipped {
+  transform: rotateY(180deg);
+}
+.tf-card:focus-visible .tf-face {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+.tf-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7);
+}
+.tf-front {
+  background: linear-gradient(165deg, #241517, #0b0b0d);
+  border: 2px solid #6e0b12;
+}
+.tf-front::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 6px;
+  background: #b3121c;
+  z-index: 5;
+}
+.tf-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.4),
+    transparent 28%,
+    transparent 50%,
+    rgba(10, 10, 10, 0.92)
+  );
+}
+.tf-ph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: end center;
+  background: radial-gradient(ellipse at 50% 30%, #3a1a1d, #120c0d 70%);
+}
+.tf-ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(0.35) contrast(1.08);
+}
+.tf-ph img[hidden] {
+  display: none;
+}
+.tf-sil {
+  width: 62%;
+  fill: #2a1416;
+  stroke: #6e0b12;
+  stroke-width: 1;
+}
+.tf-card.has-img .tf-sil {
+  display: none;
+}
+.tf-code {
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  z-index: 4;
+  font:
+    11px "Courier Prime",
+    monospace;
+  letter-spacing: 0.18em;
+  color: #d6cbc4;
+}
+.tf-bt {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  z-index: 4;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #b3121c;
+  color: #fff;
+  font:
+    700 15px "Courier Prime",
+    monospace;
+  font-style: normal;
+  box-shadow: 0 0 12px rgba(179, 18, 28, 0.7);
+}
+.tf-nm {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 40px;
+  z-index: 4;
+  color: #fff;
+}
+.tf-nm b {
+  display: block;
+  font:
+    400 clamp(20px, 6vw, 28px) / 1.1 "Special Elite",
+    monospace;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+.tf-nm span {
+  display: block;
+  margin-top: 4px;
+  font:
+    12px "Courier Prime",
+    monospace;
+  letter-spacing: 0.2em;
+  color: #e2a3a8;
+}
+.tf-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  z-index: 4;
+  text-align: center;
+  font:
+    10px "Courier Prime",
+    monospace;
+  font-style: normal;
+  letter-spacing: 0.22em;
+  color: #a99d96;
+  animation: blink 2.4s ease-in-out infinite;
+}
+.tf-back {
+  display: flex;
+  flex-direction: column;
+  transform: rotateY(180deg);
+  border: 2px solid #6e0b12;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    #e9dccf;
+  color: #1a1011;
+}
+.tf-bar {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: #8c1117;
+  color: #fff;
+  font:
+    12px "Courier Prime",
+    monospace;
+  letter-spacing: 0.22em;
+}
+.tf-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px 18px 8px 20px;
+}
+.tf-lbl {
+  margin-top: 12px;
+  font:
+    700 10px "Courier Prime",
+    monospace;
+  letter-spacing: 0.2em;
+  color: #6b4a46;
+}
+.tf-body .tf-lbl:first-child {
+  margin-top: 0;
+}
+.tf-n {
+  margin: 2px 0 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #1a1011;
+  font:
+    700 clamp(20px, 6vw, 26px) / 1.1 "Courier Prime",
+    monospace;
+  text-transform: uppercase;
+  color: #1a1011;
+  word-break: break-word;
+}
+.tf-r {
+  margin: 2px 0 0;
+  font:
+    700 14px "Courier Prime",
+    monospace;
+  text-transform: uppercase;
+}
+.tf-b {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 14px;
+  background: #b3121c;
+  color: #fff;
+  font:
+    700 16px "Courier Prime",
+    monospace;
+}
+.tf-bio {
+  margin: 2px 0 0;
+  font:
+    700 13px / 1.55 "Courier Prime",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.tf-bc {
+  flex: none;
+  height: 30px;
+  margin: 6px 18px 18px;
+  opacity: 0.85;
+  background: repeating-linear-gradient(
+    90deg,
+    #1a1011 0 2px,
+    transparent 2px 4px,
+    #1a1011 4px 5px,
+    transparent 5px 9px,
+    #1a1011 9px 12px,
+    transparent 12px 14px
+  );
+}
+.tf-stamp {
+  position: absolute;
+  right: 16px;
+  bottom: 64px;
+  padding: 2px 10px;
+  border: 3px solid #a3262a;
+  background: rgba(233, 220, 207, 0.6);
+  color: #a3262a;
+  font:
+    15px "Special Elite",
+    monospace;
+  letter-spacing: 0.1em;
+  transform: rotate(-9deg);
+}
+.tf-ctrl {
+  display: flex;
+  gap: 12px;
+}
+.tf-ctrl button {
+  padding: 10px 20px;
+  border: 2px solid #6e0b12;
+  background: #0d0a0a;
+  color: #e9d9d3;
+  font:
+    13px "Special Elite",
+    monospace;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+}
+.tf-ctrl button:first-child {
+  border-color: #b3121c;
+  background: #b3121c;
+  color: #fff;
+}
+.tf-ctrl button:hover {
+  border-color: #d7202b;
+}
+.tf-ctrl button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tf,
+  .tf.out,
+  .tf-card,
+  .tf.out .tf-card,
+  .tf-hint {
+    animation: none;
+  }
+  .tf-card {
+    transition: none;
   }
 }
