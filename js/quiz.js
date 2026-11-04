@@ -219,9 +219,11 @@ $("dl").onclick = function () {
   btn.disabled = true;
   msg.textContent = "Menyiapkan file...";
   var fileName =
-    "kartu-lab-" +
-    (lastName.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "") ||
-      "subjek") +
+    "Hasil Lab - " +
+    (lastName
+      .replace(/[\\/:*?"<>|]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim() || "Subjek") +
     ".jpg";
   function fallback() {
     $("pv-img").src = lastCanvas.toDataURL("image/jpeg", 0.92);
