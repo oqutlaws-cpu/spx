@@ -24,7 +24,7 @@ var TEAM = [
     role: "XSPOINT",
     blood: "B",
     img: "assets/team/Langit.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "He's actually a green flag.",
   },
   {
     code: "MANTICORE77",
@@ -40,7 +40,7 @@ var TEAM = [
     role: "XSPOINT",
     blood: "B",
     img: "assets/team/Jereno.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "Seseorang yang tumbuh bersama perubahan dan kemungkinan yang tak selalu dapat diprediksi. Seorang profesor dengan rasa ingin tahu yang tak pernah usai, menganggap kehidupan sebagai laboratorium tempat segala hal dapat diamati, diuji, dan dipertanyakan. Ia menghitung segala kemungkinan, mengamati setiap pergerakan, dan menyusun hipotesis dari hal-hal sederhana. Layaknya bakteri yang terus beradaptasi, ia selalu menemukan cara untuk berkembang di tengah ketidakpastian.",
   },
   {
     code: "ECHIDNA69",
@@ -60,11 +60,11 @@ var TEAM = [
   },
   {
     code: "LADON80",
-    name: "Lanric Crowley",
+    name: "Madoc Oseegiath",
     role: "XSEDITING",
     blood: "B",
     img: "assets/team/Lanric.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "Quietly working behind the scenes, leaving traces in every creation.",
   },
   {
     code: "XANTHUS47",
@@ -80,7 +80,7 @@ var TEAM = [
     role: "XSEDITING",
     blood: "B",
     img: "assets/team/Algebrazga.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "Memang ga asik, tapi sana sini, siapa yang ga tertarik? Uhuy.",
   },
   {
     code: "EOUS85",
