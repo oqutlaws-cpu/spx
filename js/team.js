@@ -3,6 +3,11 @@
 function renderTeam() {
   var g = $("tl-grid");
   if (g.childNodes.length) return;
+  /* semua kartu pakai ukuran tulisan merah yang sama: ikut kode terpanjang */
+  var maxNo = 0;
+  TEAM.forEach(function (t) {
+    maxNo = Math.max(maxNo, String(t.code).split("-").pop().length);
+  });
   TEAM.forEach(function (t, i) {
     var b = document.createElement("button");
     b.type = "button";
@@ -12,7 +17,13 @@ function renderTeam() {
       '<span class="cd"></span><em class="bt"></em><span class="ph2"><svg viewBox="0 0 60 80" aria-hidden="true"><circle cx="30" cy="30" r="13"/><path d="M6 80c0-20 11-30 24-30s24 10 24 30z"/></svg><span class="no"></span></span><span class="nm"></span><span class="rl"></span>';
     b.querySelector(".cd").textContent = t.code;
     b.querySelector(".bt").textContent = t.blood;
-    b.querySelector(".no").textContent = String(t.code).split("-").pop();
+    var no = b.querySelector(".no");
+    no.textContent = String(t.code).split("-").pop();
+    /* ukuran diatur langsung di sini (tidak tergantung CSS): muat untuk kode terpanjang */
+    b.querySelector(".ph2").style.containerType = "inline-size";
+    no.style.whiteSpace = "nowrap";
+    no.style.fontSize =
+      "min(58px, calc((100cqw - 16px) / " + maxNo * 0.45 + "))";
     b.querySelector(".nm").textContent = t.name;
     b.querySelector(".rl").textContent = t.role;
     if (t.img) {
