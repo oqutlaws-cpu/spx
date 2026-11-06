@@ -7,7 +7,7 @@ var TEAM = [
     name: " Nicayya J. Maheswari",
     role: "XCELERATOR",
     blood: "O",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "Kalau dilihat sekilas, mungkin orang akan berpikir dua kali sebelum mencoba mengajaknya berbicara. Ekspresi wajahnya sering kali terlihat datar, dengan tatapan yang seolah selalu punya sesuatu untuk dipermasalahkan. Bukan berarti sedang marah setiap saat, hanya saja wajahnya memang jarang memberikan kesan ramah. Don't take it personally, mungkin memang begitu wajah default-nya.",
     img: "assets/team/Nicayya.png",
   },
   {
@@ -16,7 +16,7 @@ var TEAM = [
     role: "XSEVENTS",
     blood: "O",
     img: "assets/team/Heidy.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "Seolah selalu punya dunianya sendiri untuk dinikmati. Tidak terlalu tertarik mencari perhatian ataupun ikut campur dalam banyak hal, ia lebih suka menjalani semuanya tanpa perlu banyak pengakuan. Lowkey by nature, unbothered by most things.",
   },
   {
     code: "PTERYX22",
@@ -48,7 +48,7 @@ var TEAM = [
     role: "XSPOINT",
     blood: "O",
     img: "assets/team/Havareth.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "There's something almost unreal about her appearance. With silver hair framing her delicate features and a pair of gentle yet captivating eyes, she carries an elegance that feels both distant and unforgettable. Like a beautiful figure taken straight out of a dream.",
   },
   {
     code: "TRITON53",
@@ -72,7 +72,7 @@ var TEAM = [
     role: "XSEDITING",
     blood: "B",
     img: "assets/team/Malona.png",
-    bio: "Ganti dengan bio singkat anggota ini.",
+    bio: "First impression? A face that could easily get away with anything. Her doll-like eyes, perfectly framed bangs, and sweet-looking features give her an innocent appearance, but there's something undeniably captivating about the way she carries herself. Cute, charming, and definitely not easy to overlook.",
   },
   {
     code: "ORTHRUS20",
